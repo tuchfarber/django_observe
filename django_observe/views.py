@@ -10,7 +10,7 @@ from dataclasses import dataclass
 
 import datetime
 
-from django_monitor.models import Event
+from django_observe.models import Event
 
 # Create your views here.
 
@@ -137,4 +137,4 @@ def glass(request):
         "hit_data": json.dumps(get_time_series(events, config)),
         "route_data": json.dumps(get_top_routes(events)),
     }
-    return render(request, "django_monitor/glass.html", context)
+    return render(request, "django_observe/glass.html", context)

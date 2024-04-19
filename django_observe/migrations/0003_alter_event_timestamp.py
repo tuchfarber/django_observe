@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("django_monitor", "0002_alter_event_timestamp"),
+        ("django_observe", "0002_alter_event_timestamp"),
     ]
 
     operations = [

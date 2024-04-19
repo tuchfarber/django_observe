@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ("django_monitor", "0001_initial"),
+        ("django_observe", "0001_initial"),
     ]
 
     operations = [

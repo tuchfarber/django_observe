@@ -4,7 +4,7 @@ import random
 from django.conf import settings
 from django.http import HttpRequest
 
-from django_monitor.models import Event
+from django_observe.models import Event
 
 
 class MonitoringMiddleware:
@@ -12,7 +12,7 @@ class MonitoringMiddleware:
         # One-time configuration and initialization.
         self.events = []
         self.get_response = get_response
-        self.sample_rate = getattr(settings, "DJANGO_MONITOR_SAMPLE_RATE", 1)
+        self.sample_rate = getattr(settings, "DJANGO_OBSERVE_SAMPLE_RATE", 1)
 
     def __call__(self, request: HttpRequest):
         # Code to be executed for each request before
