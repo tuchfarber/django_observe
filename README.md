@@ -14,11 +14,12 @@ This app lives in the middleware and creates a row in a database for each reques
 ## Usage
 ### How to Install
 To install this app into your Django project:
-1. `pip install django-observe`
-2. Add `"django_observe"` to your `INSTALLED_APPS`
-3. Add `"django_observe.middleware.MonitoringMiddleware"` to your MIDDLEWARE
-4. Add `path("observe", include("django_observe.urls"))` to your base routes. (Change "observe" to whatever path you want it at)
-5. View the new route as a staff user
+1. `pip install django-observe` - Install package
+1. `./manage.py migrate` - Run migrations
+1. Add `"django_observe"` to your `INSTALLED_APPS`
+1. Add `"django_observe.middleware.MonitoringMiddleware"` to your MIDDLEWARE
+1. Add `path("observe", include("django_observe.urls"))` to your base routes. (Change "observe" to whatever path you want it at)
+1. View the new route as a staff user
 
 ### Configuration
 You can set `DJANGO_OBSERVE_SAMPLE_RATE` in your settings to a value between `0` and `1` to set the sampling rate. 
